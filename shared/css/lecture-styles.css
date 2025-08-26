@@ -1,0 +1,425 @@
+/* CLINICAL SCIENCES LECTURE STYLES */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --clinical-blue: #0077be;
+    --medical-green: #00a651;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--primary-color);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.lecture-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.lecture-header {
+    background: linear-gradient(135deg, var(--clinical-blue), var(--medical-green));
+    color: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.lecture-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.lecture-title {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.lecture-subtitle {
+    font-size: 1.2em;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.lecture-meta {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.meta-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.nav-breadcrumb {
+    background: #f8f9fa;
+    padding: 15px 25px;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+.nav-breadcrumb a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-breadcrumb a:hover {
+    color: var(--accent-color);
+}
+
+.objectives-box {
+    background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+    border: 2px solid var(--success-color);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 25px 0;
+    position: relative;
+}
+
+.objectives-box::before {
+    content: "🎯";
+    position: absolute;
+    top: -15px;
+    left: 25px;
+    background: var(--success-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+.objectives-box h3 {
+    color: var(--success-color);
+    margin-bottom: 15px;
+}
+
+.objectives-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.objectives-list li {
+    padding: 8px 0 8px 30px;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.objectives-list li:hover {
+    transform: translateX(5px);
+}
+
+.objectives-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.content-section {
+    margin: 40px 0;
+    padding: 30px;
+    border-radius: 10px;
+    background: #fdfdfd;
+    border-left: 4px solid var(--secondary-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.analogy-box {
+    background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+    border: 2px solid var(--warning-color);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 25px 0;
+    position: relative;
+}
+
+.analogy-box::before {
+    content: "💡";
+    position: absolute;
+    top: -15px;
+    left: 25px;
+    background: var(--warning-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+.analogy-box h4 {
+    color: #d68910;
+    margin-bottom: 10px;
+}
+
+.clinical-correlation {
+    background: linear-gradient(135deg, #fdf2e9, #f8e8d0);
+    border: 2px solid var(--accent-color);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 25px 0;
+    position: relative;
+}
+
+.clinical-correlation::before {
+    content: "🏥";
+    position: absolute;
+    top: -15px;
+    left: 25px;
+    background: var(--accent-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+.clinical-correlation h4 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.key-terms {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 25px 0;
+}
+
+.key-terms h4 {
+    color: #495057;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 5px;
+}
+
+.term {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: white;
+    padding: 6px 14px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    transition: transform 0.2s;
+}
+
+.term:hover {
+    transform: scale(1.05);
+    background: var(--primary-color);
+}
+
+.quiz-section {
+    background: linear-gradient(135deg, #e1f5fe, #b3e5fc);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+.quiz-section h3 {
+    color: var(--clinical-blue);
+    margin-bottom: 20px;
+}
+
+.quiz-question {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border-left: 4px solid var(--clinical-blue);
+    transition: transform 0.2s;
+}
+
+.quiz-question:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-options {
+    margin: 15px 0;
+}
+
+.quiz-options label {
+    display: block;
+    padding: 12px 16px;
+    margin: 8px 0;
+    background: #f5f5f5;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.quiz-options label:hover {
+    background: #e9ecef;
+    border-color: var(--secondary-color);
+}
+
+.quiz-options input[type="radio"] {
+    margin-right: 12px;
+    transform: scale(1.2);
+}
+
+.image-placeholder {
+    width: 100%;
+    min-height: 250px;
+    background: linear-gradient(135deg, #f1f2f6, #ddd);
+    border: 2px dashed #999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1.1em;
+    border-radius: 10px;
+    margin: 25px 0;
+    transition: all 0.3s;
+}
+
+.image-placeholder:hover {
+    background: linear-gradient(135deg, #e8e9ed, #ccc);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    padding: 25px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    border-radius: 12px;
+    color: white;
+}
+
+.nav-button {
+    background: var(--secondary-color);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.nav-button:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.progress-info {
+    text-align: center;
+}
+
+.progress-bar {
+    width: 200px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--success-color);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .lecture-container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .lecture-title {
+        font-size: 2em;
+    }
+
+    .lecture-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+}

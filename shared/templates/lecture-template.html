@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LECTURE_TITLE</title>
+    <link rel="stylesheet" href="../../shared/css/lecture-styles.css">
+</head>
+<body>
+    <div class="lecture-container">
+        <div class="nav-breadcrumb">
+            <a href="../../index.html">🏠 Clinical Sciences</a> > 
+            <a href="../index.html">COURSE_NAME</a> > 
+            <strong>LECTURE_TITLE</strong>
+        </div>
+        
+        <div class="lecture-header">
+            <h1 class="lecture-title">LECTURE_TITLE</h1>
+            <p class="lecture-subtitle">LECTURE_SUBTITLE</p>
+            <div class="lecture-meta">
+                <div class="meta-item">⏱️ Duration: 60 minutes</div>
+                <div class="meta-item">📖 Module: MODULE_NAME</div>
+                <div class="meta-item">🎯 Level: Undergraduate</div>
+            </div>
+        </div>
+        
+        <div class="objectives-box">
+            <h3>🎯 Learning Objectives</h3>
+            <p>By the end of this lecture, you will be able to:</p>
+            <ul class="objectives-list">
+                OBJECTIVES_CONTENT
+            </ul>
+        </div>
+        
+        <div id="main-content">
+            MAIN_CONTENT
+        </div>
+        
+        <div class="key-terms">
+            <h4>🔑 Key Medical Terms</h4>
+            KEY_TERMS
+        </div>
+        
+        <div class="quiz-section">
+            <h3>🧠 Knowledge Check</h3>
+            QUIZ_CONTENT
+            <button onclick="checkAnswers()" class="nav-button">Check Answers</button>
+            <div id="quiz-results"></div>
+        </div>
+        
+        <div class="navigation">
+            <a href="PREV_LECTURE" class="nav-button">⬅️ Previous</a>
+            <div class="progress-info">
+                <p><strong>LECTURE_NUMBER of 50</strong></p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: PROGRESS_PERCENT%;"></div>
+                </div>
+            </div>
+            <a href="NEXT_LECTURE" class="nav-button">Next ➡️</a>
+        </div>
+    </div>
+    
+    <script src="../../shared/js/lecture-functions.js"></script>
+</body>
+</html>
